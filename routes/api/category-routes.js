@@ -53,7 +53,7 @@ router.post('/', (req, res) => {
   Category.create({
     category_name: req.body.category_name
   })
-    .then(dbCategoryData => res.json(dbCatData))
+    .then(dbCatData => res.json(dbCatData))
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
